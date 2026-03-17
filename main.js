@@ -243,6 +243,72 @@ const textUpperCase = convertToUpperCase(textLowerCase);
 console.log(textUpperCase);
 
 
+// Bài 7: Kiểm tra số âm / dương / 0
+// input: -5 → "am"
+// input: 0 → "zero"
+// input: 10 → "duong"
+
+function checkNumber(number) {
+    if (number < 0) {
+        console.log("am");
+    } else if (number > 0) {
+        console.log("duong");
+    } else {
+        console.log("Zero");
+    }
+}
+
+var number = -5
+checkNumber(number);
+
+
+// Bài 8: Đếm số số chẵn trong mảng
+// input: [1,2,3,4,6]
+// output: 3
+
+function checkEvenArrays(number) {
+    var count = 0;
+    for (var i = 0; i < number.length; i++) {
+        if (number[i] % 2 === 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+var number = [1, 5, 2, 9, 3];
+var res = checkEvenArrays(number);
+console.log(res);
+
+
+// Bài 9: Tìm số nhỏ nhất
+// input: [5,2,8,1]
+// output: 1
+
+function minArrays(number) {
+    var min = number[0];
+    for (var i = 0; i < number.length; i++) {
+        if (number[i] < min) {
+            min = number[i];
+        }
+    }
+    return min;
+}
+
+var number = [5, 2, 8, 1];
+console.log(minArrays(number));
+
+
+
+// Bài 10: Nối mảng thành chuỗi
+// input: ["a","b","c"]
+// output: "abc"
+
+const input = ["a", "b", "c"];
+const output = input.join(''); // Kết quả: "abc"
+console.log(output);
+
+
 
 
 
