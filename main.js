@@ -42,7 +42,6 @@ function reseverString(str) {
         newStr += str[i];
     }
     return newStr;
-
 }
 var str = "hello";
 var res = reseverString(str);
@@ -72,7 +71,7 @@ console.log(res);
 // input: [1, 2, 2, 3, 1, 2]
 // output: {1:2, 2:3, 3:1}
 
-// B1 : khỏi tạo cái mangl
+// B1 : khỏi tạo cái mảng
 // B2 : Lọc qua
 // B3 : kiểm tra mảng mới vừa tạo có index chưa nếu r có rồi thì cộng dồn , nếu chưa thì ko cộng
 
@@ -308,6 +307,78 @@ const input = ["a", "b", "c"];
 const output = input.join(''); // Kết quả: "abc"
 console.log(output);
 
+
+
+// Bài 11: Lọc số chẵn
+// input: [1,2,3,4,5]
+// output: [2,4]
+
+function filterEvent(number) {
+    let arr = [];
+    for (var i = 0; i < number.length; i++) {
+        if (number[i] % 2 === 0) {
+            arr.push(number[i]);
+        }
+    }
+    return arr;
+}
+var number = [5, 2, 8, 1];
+console.log(filterEvent(number));
+
+// Bài 12: Bình phương các phần tử
+// input: [1,2,3]
+// output: [1,4,9]
+function squareArray(arr) {
+    return arr.map(num => Math.pow(num, 2));
+}
+console.log(squareArray([1, 2, 3])); // [1, 4, 9]
+
+// Bài 13: Tìm phần tử đầu tiên > 10
+// input: [3,7,12,5]
+// output: 12
+
+function findFirstGreaterThan10(arr) {
+    return arr.find(num => num > 10);
+}
+
+console.log(findFirstGreaterThan10([3, 7, 12, 5, 13])); // 12
+
+// Bài 14: Kiểm tra tất cả phần tử > 0
+// input: [1,2,3]
+// output: true
+
+function isAllGreaterThanZero(arr) {
+    return arr.every(num => num > 0);
+}
+
+console.log(isAllGreaterThanZero([3, 7, 12, 5, 13]));
+
+// Bài 15: Có phần tử nào < 0 không
+// input: [1, 2, -3]
+// output: true
+
+function isNegativeNumber(arr) {
+    return arr.some(num => num < 0);
+}
+
+console.log(isNegativeNumber([3, 7, 12, 5, -3]));
+
+
+// Bài 16: Đếm số lẻ
+// input: [1,2,3,4,5]
+// output: 3
+
+function countOdd(arr) {
+    let count = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 1) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countOdd([3, 7, 12, 5, 13]));
 
 
 
