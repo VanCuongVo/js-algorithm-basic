@@ -381,6 +381,42 @@ function countOdd(arr) {
 console.log(countOdd([3, 7, 12, 5, 13]));
 
 
+// Bài 18: Tìm index của phần tử
+// input: [10, 20, 30], tìm 20
+// output: 1
+
+let inputV2 = [10, 20, 30];
+let target = 20;
+
+const index = inputV2.indexOf(target);
+console.log(index);
+
+// Bài 19: Kiểm tra phần tử có tồn tại không
+// input: [1,2,3], tìm 4
+// output: false
+
+target = 4;
+// indexOf trả về -1 nếu không tìm thấy
+const result = inputV2.indexOf(target) !== -1;
+console.log(result); // Output: false
+
+// Bài 20: Sắp xếp tăng dần
+// input: [5,2,9,1]
+// output: [1,2,5,9]
+
+const numbers = [40, 1, 5, 200];
+
+console.log(numbers.sort((a, b) => a - b)); //(Tăng)
+
+console.log(numbers.sort((a, b) => b - a)); // (Giảm)
+
+
+
+
+
+
+
+
 
 
 
