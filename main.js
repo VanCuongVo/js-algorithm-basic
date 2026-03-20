@@ -410,6 +410,16 @@ console.log(numbers.sort((a, b) => a - b)); //(Tăng)
 
 console.log(numbers.sort((a, b) => b - a)); // (Giảm)
 
+// Bài 21: Tính tổng số chẵn
+// input: [1,2,3,4,6]
+// output: 12
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const tong = arr.filter(n => n % 2 === 0).reduce((sum, currentVal) => sum + currentVal, 0);
+console.log(tong);
+
+
+
+
 
 
 
