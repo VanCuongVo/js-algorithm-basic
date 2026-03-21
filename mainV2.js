@@ -98,6 +98,141 @@ console.log(combined);
 
 
 
+// Bài 1: Đếm số chẵn
+
+// 👉 Input: [1, 2, 3, 4, 6]
+// 👉 Output: 3
+
+
+// Version 1
+function countEvent(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countEvent(arr));
+
+// Version 2
+function countEventUseFilter(arr) {
+    let eventNumber = arr.filter(function (num) {
+        return num % 2 === 0;
+    });
+
+    return eventNumber.length;
+}
+
+console.log(countEventUseFilter(arr));
+
+
+// Bài 2: Tính tổng mảng
+
+// 👉 Input: [1, 2, 3, 4]
+// 👉 Output: 10
+
+// Version dùng for
+function sumArr(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+console.log(sumArr(arr));
+
+// Version dùng Fliter // trả về true or false
+
+function sumArrUseFilter(arr) {
+    let sum = 0;
+    arr.filter(num => {
+        sum += num
+    })
+    return sum;
+}
+
+console.log(sumArrUseFilter(arr));
+
+// Version reduce
+
+function sumArrUseReduce(arr) {
+    return arr.reduce((a, b) => a + b, 0);
+}
+
+console.log(sumArrUseReduce(arr));
+
+// Bài 3: Tìm số lớn nhất
+
+// 👉 Input: [5, 2, 9, 1]
+// 👉 Output: 9
+
+function findMax(arr) {
+    return arr.reduce((max, num) => num > max ? num : max);
+}
+console.log(findMax(arr));
+
+// Bài 4: Đếm số chữ số
+
+// 👉 Input: 123456
+// 👉 Output: 6
+
+function countElement(nums) {
+    let count = 0;
+    while (nums !== 0) {
+        count++;
+        nums = Math.floor(nums / 10);
+    }
+    return count;
+}
+
+console.log(countElement(123456));
+
+// Bài 5: Kiểm tra tất cả phần tử > 0
+
+// 👉 Input: [1, 2, 3] → true
+// 👉 Input: [1, -2, 3] → false
+
+const allPositive = (arr) => {
+    return arr.every(num => {
+        return num > 0;
+    });
+}
+arr = [1, -2, 3];
+console.log(allPositive(arr));
+
+// const someNegative = (arr) => {
+//     return arr.some((num) => {
+//         return num < 0;
+//     })
+// };
+// arr = [1, -2, 3];
+// console.log(someNegative(arr));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
