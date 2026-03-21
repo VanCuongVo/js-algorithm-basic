@@ -213,6 +213,53 @@ console.log(allPositive(arr));
 // console.log(someNegative(arr));
 
 
+// Bài 6: Bình phương các phần tử
+
+// 👉 Input: [1, 2, 3]
+// 👉 Output: [1, 4, 9]
+// 👉 Gợi ý: map()
+
+const squareArrayUseMap = (arr) => {
+    return arr.map(num => Math.pow(num, 2));
+}
+console.log(squareArrayUseMap(arr));
+
+// Bài 7: Lọc số > 10
+
+// 👉 Input: [5, 12, 8, 20]
+// 👉 Output: [12, 20]
+// 👉 Gợi ý: filter()
+
+const filterNumberGeaterThan10 = (arr) => {
+    return arr.filter(num => num > 10);
+}
+arr = [5, 12, 8, 20]
+console.log(filterNumberGeaterThan10(arr));
+
+// Bài 8: Tìm phần tử đầu tiên > 10
+
+// 👉 Input: [5, 8, 12, 20]
+// 👉 Output: 12
+// 👉 Gợi ý: find()
+
+const findFristNumberGreaterThan10 = (arr) => {
+    return arr.find(num => num > 10);
+}
+
+console.log(findFristNumberGreaterThan10(arr));
+
+// Bài 10: Kiểm tra tất cả là số chẵn
+
+// 👉 Input: [2, 4, 6] → true
+// 👉 Gợi ý: every()
+
+const checkEvent = (arr) => {
+    return arr.every(num => num % 2 === 0);
+}
+
+arr = [2, 4, 6];
+console.log(checkEvent(arr));
+
 
 
 
