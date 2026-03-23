@@ -261,6 +261,86 @@ arr = [2, 4, 6];
 console.log(checkEvent(arr));
 
 
+// Bài 11: Đếm số lần xuất hiện
+
+// 👉 Input: [1,1,2,3,2,1]
+// 👉 Output:
+// {1: 3, 2: 2, 3: 1}
+
+const countOccurrences = (arr) => {
+    return arr.reduce((arr, cur) => {
+        arr[cur] = arr[cur] ? arr[cur] + 1 : 1;
+        return arr;
+    }, {});
+}
+const items = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+const re = countOccurrences(items);
+console.log(re);
+
+// Bài 12: Đảo ngược chuỗi
+
+// 👉 Input: "hello"
+// 👉 Output: "olleh"
+let strHello = "Hello";
+let reverseStr = [...strHello].reverse().join('');
+console.log(reverseStr);
+
+
+// Bài 13: Kiểm tra palindrome
+
+// 👉 Input: "madam" → true
+// 👉 Input: "hello" → false
+
+function reverse(s) { // using this method for second half of string to be embedded
+    const reversed = s.split("").reverse().join("");
+    return s === reversed;
+}
+
+// s = madam;
+console.log(reverse("Helllo"));
+
+// Bài 14: Xoá phần tử trùng
+
+// 👉 Input: [1,2,2,3,3,4]
+// 👉 Output: [1,2,3,4]
+
+const removeDuplicateUseArrowFuntion = (arr) => {
+    var newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (newArr.indexOf(arr[i]) === -1) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+
+}
+arr = [1, 2, 2, 3, 3, 4];
+console.log(removeDuplicateUseArrowFuntion(arr));
+
+// Bài 15: Gộp 2 mảng không trùng
+
+// 👉 Input: [1,2,3] và [2,3,4]
+// 👉 Output: [1,2,3,4]
+
+var arr1 = [1, 2, 3];
+var arr2 = [2, 3, 4];
+
+var arr3 = [...new Set([...arr1, ...arr2])];
+
+console.log(arr3);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
