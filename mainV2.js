@@ -330,11 +330,110 @@ var arr3 = [...new Set([...arr1, ...arr2])];
 console.log(arr3);
 
 
+const countEventNumber = (arr) => {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            count++;
+        }
+    }
+
+    return count;
+}
+arr = [1, 2, 3, 4, 6];
+console.log(countEventNumber(arr));
+
+// 🟢 Bài 2: Tìm số lớn thứ 2
+
+// Yêu cầu:
+// Viết hàm tìm số lớn thứ 2 trong mảng
+
+// Input:
+
+// [5, 1, 9, 3, 7]
+
+// Output:
+
+// 7
+
+// 👉 Gợi ý:
+
+// sort giảm dần
+// hoặc duyệt 1 lần giữ max + secondMax
+
+const findSecondNumber = (arr) => {
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    var index = arr.indexOf(max);
+    console.log(index);
+    arr.splice(index, 1); // ví trí só 2 và số lượng phần tử
+    var secondLargest = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > secondLargest) {
+            secondLargest = arr[i];
+        }
+    }
+    return secondLargest;
+}
+arr = [5, 1, 9, 3, 7];
+console.log(findSecondNumber(arr));
+
+//   const reversed = s.split("").reverse().join("");
+//     return s === reversed;
+
+function reseverStr(str) {
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+}
+
+console.log(reseverStr("madam"));
 
 
 
 
+// const countOccurrences = (arr) => {
+//     return arr.reduce((arr, cur) => {
+//         arr[cur] = arr[cur] ? arr[cur] + 1 : 1;
+//         return arr;
+//     }, {});
+// }
+// const items = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+// const re = countOccurrences(items);
+// console.log(re);
 
+
+
+// 🟡 Bài 4: Đếm số lần xuất hiện phần tử
+
+// Yêu cầu:
+// Viết hàm trả về object đếm số lần xuất hiện
+
+// Input:
+
+// ["a", "b", "a", "c", "b", "a"]
+
+// Output:
+
+// {
+//   a: 3,
+//   b: 2,
+//   c: 1
+// }
+
+const countElementStr = (arr) => {
+    return arr.reduce((arr, cur) => {
+        arr[cur] = arr[cur] ? arr[cur] + 1 : 1;
+        return arr;
+    }, []);
+}
+
+
+arr = ["a", "b", "a", "c", "b", "a"];
+console.log(countElementStr(arr));
 
 
 
